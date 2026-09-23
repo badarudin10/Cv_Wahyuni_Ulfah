@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Wahyuni Ulfah Portofolio</title>
+<title>Wahyuni Ulfah - Portofolio</title>
 <style>
 :root {
   --navy: #2c3e50;
@@ -72,24 +72,14 @@ img {
   text-align: center;
 }
 
-.hero .photo {
-  width: 120px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 4px solid rgba(255, 255, 255, 0.85);
-  margin: 0 auto 16px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
-}
-
 .hero h1 {
   font-size: 26px;
   margin: 0 0 6px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .hero .role {
-  font-size: 12.5px;
+  font-size: 13px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #c3cad1;
@@ -105,10 +95,6 @@ img {
   color: #dfe3e7;
 }
 
-.hero .contact-row span {
-  white-space: nowrap;
-}
-
 nav {
   position: sticky;
   top: 0;
@@ -119,9 +105,11 @@ nav {
   white-space: nowrap;
 }
 
-nav.wrap {
+.nav-wrap {
   display: flex;
   gap: 6px;
+  max-width: 900px;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
@@ -196,14 +184,6 @@ section h2 .dot {
   border-radius: 999px;
 }
 
-.exp-card .exp-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
 .exp-title {
   font-size: 15.5px;
   font-weight: 700;
@@ -221,6 +201,7 @@ section h2 .dot {
   font-size: 12px;
   color: var(--muted);
   font-weight: 600;
+  float: right;
 }
 
 .exp-company {
@@ -240,17 +221,18 @@ section h2 .dot {
   margin-bottom: 5px;
 }
 
+/* UPLOAD & GALLERY */
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .thumb {
   position: relative;
-  width: 84px;
-  height: 84px;
+  width: 90px;
+  height: 90px;
   border-radius: 10px;
   overflow: hidden;
   background: var(--bg);
@@ -265,16 +247,16 @@ section h2 .dot {
 
 .thumb .del {
   position: absolute;
-  top: 2px;
-  right: 2px;
-  width: 20px;
-  height: 20px;
+  top: 4px;
+  right: 4px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
   border: none;
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 21px;
   text-align: center;
   cursor: pointer;
   padding: 0;
@@ -288,21 +270,16 @@ section h2 .dot {
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 9px 14px;
-  font-size: 12.5px;
+  padding: 10px 16px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
 }
 
-.upload-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
 .upload-hint {
-  font-size: 11px;
+  font-size: 11.5px;
   color: var(--muted);
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 input[type="file"] {
@@ -315,26 +292,175 @@ footer {
   font-size: 12px;
   color: var(--muted);
 }
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: var(--navy);
-  color: #fff;
-  flex-shrink: 0;
-}
-
-.badge svg {
-  width: 14px;
-  height: 14px;
-}
 </style>
 </head>
 <body>
-  <!-- Konten Portofolio Anda dapat dilanjutkan di sini -->
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="wrap">
+      <h1>WAHYUNI ULFAH</h1>
+      <div class="role">Professional Frontliner & SPG</div>
+      <div class="contact-row">
+        <span>📞 08xx-xxxx-xxxx</span>
+        <span>✉️ email@example.com</span>
+        <span>📍 Indonesia</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGASI -->
+  <nav>
+    <div class="nav-wrap">
+      <a href="#tentang">Tentang</a>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#keahlian">Keahlian</a>
+      <a href="#galeri">Galeri & Upload</a>
+    </div>
+  </nav>
+
+  <!-- KONTEN UTAMA -->
+  <main class="wrap">
+    
+    <!-- Tentang Saya -->
+    <section id="tentang">
+      <h2><span class="dot"></span> Tentang Saya</h2>
+      <div class="card">
+        <p class="about-text">
+          Seorang profesional di bidang pelayanan pelanggan, *frontliner*, dan promosi (*SPG*) dengan pengalaman luas di industri ritel dan FnB. Memiliki keahlian komunikasi yang kuat, penguasaan produk yang mendalam (*product mastery*), serta komitmen tinggi dalam memberikan pelayanan terbaik kepada pelanggan.
+        </p>
+      </div>
+    </section>
+
+    <!-- Pengalaman Kerja -->
+    <section id="pengalaman">
+      <h2><span class="dot"></span> Pengalaman Kerja</h2>
+      
+      <div class="card exp-card">
+        <div class="exp-top">
+          <span class="exp-title">SPG / Frontliner</span>
+          <span class="exp-period">2025</span>
+        </div>
+        <div class="exp-company">PT. Kanzler</div>
+        <ul>
+          <li>Melakukan promosi produk secara aktif kepada pengunjung dan konsumen langsung.</li>
+          <li>Menjelaskan keunggulan produk dan merespons pertanyaan pelanggan dengan ramah.</li>
+          <li>Mencapai target penjualan harian dan menjaga standar pelayanan merek.</li>
+        </ul>
+      </div>
+
+      <div class="card exp-card">
+        <div class="exp-top">
+          <span class="exp-title">Frontliner & Promosi</span>
+          <span class="exp-period">2023 – 2025</span>
+        </div>
+        <div class="exp-company">PT. Radiant Nutrindo</div>
+        <ul>
+          <li>Berperan aktif sebagai garda terdepan dalam melayani dan mengarahkan konsumen.</li>
+          <li>Mengelola penataan produk agar menarik dan mudah diakses oleh pembeli.</li>
+          <li>Membangun komunikasi yang baik guna meningkatkan loyalitas pelanggan terhadap merek.</li>
+        </ul>
+      </div>
+
+      <div class="card exp-card">
+        <div class="exp-top">
+          <span class="exp-title">Crew Member</span>
+          <span class="exp-period">2021 – 2022</span>
+        </div>
+        <div class="exp-company">Caffe Kopi Kiri</div>
+        <ul>
+          <li>Melayani pesanan pelanggan dengan cepat, tepat, dan ramah.</li>
+          <li>Menjaga kebersihan area kerja serta standar operasional kafe.</li>
+          <li>Menangani transaksi pembayaran dan pencatatan kasir secara akurat.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Keahlian -->
+    <section id="keahlian">
+      <h2><span class="dot"></span> Keahlian & Kompetensi</h2>
+      <div class="card">
+        <div class="skills-grid">
+          <div class="skill-chip">Customer Service</div>
+          <div class="skill-chip">Product Mastery</div>
+          <div class="skill-chip">Komunikasi Publik</div>
+          <div class="skill-chip">Penjualan & Promosi (SPG)</div>
+          <div class="skill-chip">Manajemen Kasir / Transaksi</div>
+          <div class="skill-chip">Kerjasama Tim</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fitur Galeri & Upload Foto -->
+    <section id="galeri">
+      <h2><span class="dot"></span> Galeri Portofolio & Dokumentasi</h2>
+      <div class="card">
+        <div class="gallery" id="galleryContainer">
+          <!-- Foto-foto yang diunggah akan muncul secara dinamis di sini -->
+        </div>
+        
+        <label class="upload-btn" for="fileInput">
+          <span>+ Unggah Foto Baru</span>
+        </label>
+        <input type="file" id="fileInput" accept="image/*" multiple>
+        <div class="upload-hint">Pilih satu atau beberapa foto (Format: JPG, PNG). Foto akan langsung tampil di halaman ini.</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Wahyuni Ulfah. All rights reserved.</p>
+  </footer>
+
+  <!-- JAVASCRIPT UNTUK FITUR UPLOAD FOTO -->
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const galleryContainer = document.getElementById('galleryContainer');
+
+    fileInput.addEventListener('change', function(event) {
+      const files = event.target.files;
+      
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        
+        if (!file.type.startsWith('image/')) continue;
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          // Buat elemen pembungkus thumbnail
+          const thumbDiv = document.createElement('div');
+          thumbDiv.className = 'thumb';
+
+          // Buat elemen gambar
+          const img = document.createElement('img');
+          img.src = e.target.result;
+          img.alt = 'Dokumentasi Portofolio';
+
+          // Buat tombol hapus (X)
+          const delBtn = document.createElement('button');
+          delBtn.className = 'del';
+          delBtn.innerHTML = '&times;';
+          delBtn.type = 'button';
+          
+          // Aksi ketika tombol hapus diklik
+          delBtn.onclick = function() {
+            thumbDiv.remove();
+          };
+
+          // Gabungkan elemen ke dalam galeri
+          thumbDiv.appendChild(img);
+          thumbDiv.appendChild(delBtn);
+          galleryContainer.appendChild(thumbDiv);
+        };
+
+        reader.readAsDataURL(file);
+      }
+      
+      // Reset input agar bisa mengunggah file yang sama kembali jika diperlukan
+      fileInput.value = '';
+    });
+  </script>
+
 </body>
 </html>
