@@ -349,5 +349,42 @@ async function handleDelete(jobKey, idx){
   renderExperiences();
 }
 
-async function init(){
-  renderExperiences(); // static render first (no photos) so page paints i
+ async function init(){
+  renderExperiences(); // static render first (no photos) so page paints immediately
+
+  if (!window.claude || !window.claude.use) return;
+
+  const [db, assets, user] = await Promise.all([
+    window.claude.use('db'),
+    window.claude.use('assets'),
+    window.claude.use('user')
+  ]);
+  dbCap = db;
+  assetsCap = assets;
+
+  const statusEl = document.getElementById('db-status');
+
+  if (user) {
+    try { canEdit = !!(await user.canEdit()); } catch (e) { canEdit = false; }
+  }
+  canEdit = canEdit && !!dbCap && !!assetsCap;
+
+  if (!dbCap) {
+    if (statusEl) statusEl.textContent = '';
+    return;
+  }
+
+  docRef = dbCap.doc('portfolio/photos');
+  docRef.onSnapshot((snap) => {
+    const data = snap.exists ? (snap.data() || {}) : {};
+    state = data.jobs || {};
+    renderExperiences();
+  }, (err) => {
+    console.error('DB error:', err);
+  });
+}
+
+init();
+</script>
+</body>
+</html>
