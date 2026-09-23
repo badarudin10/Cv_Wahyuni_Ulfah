@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Wahyuni Ulfah - Portofolio</title>
+<title>Portofolio - Wahyuni Ulfah</title>
+<!-- Memuat Pustaka Font Awesome untuk Ikon Logo -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 :root {
-  --navy: #2c3e50;
-  --navy-dark: #1c2833;
+  --navy: #1c2833;
+  --navy-dark: #11181f;
   --bg: #f5f6f8;
   --card: #ffffff;
   --text: #2b2b2b;
@@ -64,23 +66,24 @@ img {
   padding: 0 20px;
 }
 
-/* HERO */
+/* HEADER / HERO SESUAI GAMBAR REFERENSI */
 .hero {
-  background: linear-gradient(135deg, #a93226, #78281f);
+  background: linear-gradient(135deg, #1e293b, #0f172a);
   color: #fff;
-  padding: 48px 20px 40px;
+  padding: 45px 20px 35px;
   text-align: center;
 }
 
+/* BINGKAI FOTO PROFIL */
 .hero .photo-container {
-  width: 110px;
-  height: 130px;
+  width: 125px;
+  height: 145px;
   margin: 0 auto 16px;
-  border-radius: 12px;
+  border-radius: 20px;
   overflow: hidden;
-  border: 3px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  background: #eee;
+  border: 5px solid #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  background: #fff;
 }
 
 .hero .photo-container img {
@@ -90,28 +93,34 @@ img {
 }
 
 .hero h1 {
-  font-size: 26px;
-  margin: 0 0 6px;
-  letter-spacing: 2px;
+  font-size: 25px;
+  margin: 0 0 8px;
+  letter-spacing: 1px;
 }
 
 .hero .role {
-  font-size: 13px;
-  letter-spacing: 1.5px;
+  font-size: 11.5px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #fadbd8;
-  margin: 0 0 18px;
+  color: #cbd5e1;
+  margin: 0 0 16px;
 }
 
 .hero .contact-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px 18px;
-  font-size: 13px;
-  color: #fdedec;
+  gap: 12px 20px;
+  font-size: 12.5px;
+  color: #cbd5e1;
 }
 
+.hero .contact-row i {
+  color: #38bdf8;
+  margin-right: 6px;
+}
+
+/* NAVIGASI */
 nav {
   position: sticky;
   top: 0;
@@ -124,7 +133,8 @@ nav {
 
 .nav-wrap {
   display: flex;
-  gap: 6px;
+  justify-content: center;
+  gap: 12px;
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
@@ -132,7 +142,7 @@ nav {
 
 nav a {
   display: inline-block;
-  padding: 14px 12px;
+  padding: 14px 14px;
   color: var(--muted);
   text-decoration: none;
   font-size: 13.5px;
@@ -145,13 +155,13 @@ nav a:hover {
 }
 
 section {
-  padding: 34px 0;
+  padding: 30px 0;
 }
 
 section h2 {
-  font-size: 19px;
+  font-size: 18px;
   color: var(--navy);
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -165,8 +175,8 @@ section h2 {
 }
 
 section h2 .dot {
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: var(--accent);
   flex-shrink: 0;
@@ -181,7 +191,7 @@ section h2 .dot {
 }
 
 .about-text {
-  font-size: 14.5px;
+  font-size: 14px;
   color: var(--text);
   text-align: justify;
 }
@@ -202,7 +212,7 @@ section h2 .dot {
 }
 
 .exp-title {
-  font-size: 15.5px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--navy);
 }
@@ -222,7 +232,7 @@ section h2 .dot {
 }
 
 .exp-company {
-  font-size: 13px;
+  font-size: 12.5px;
   font-style: italic;
   color: var(--muted);
   margin: 2px 0 10px;
@@ -238,7 +248,7 @@ section h2 .dot {
   margin-bottom: 5px;
 }
 
-/* UPLOAD & GALLERY DI DALAM KARTU PENGALAMAN */
+/* AREA UPLOAD FOTO DI SETIAP PENGALAMAN */
 .exp-gallery-section {
   margin-top: 14px;
   padding-top: 12px;
@@ -278,7 +288,7 @@ section h2 .dot {
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
   border: none;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 17px;
   text-align: center;
   cursor: pointer;
@@ -289,7 +299,7 @@ section h2 .dot {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--navy);
+  background: #1e293b;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -297,6 +307,10 @@ section h2 .dot {
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
+}
+
+.upload-btn i {
+  font-size: 11px;
 }
 
 .upload-hint {
@@ -311,7 +325,7 @@ input[type="file"] {
 
 footer {
   text-align: center;
-  padding: 26px 20px 40px;
+  padding: 24px 20px 40px;
   font-size: 12px;
   color: var(--muted);
 }
@@ -319,18 +333,19 @@ footer {
 </head>
 <body>
 
-  <!-- HERO SECTION -->
+  <!-- HEADER -->
   <header class="hero">
     <div class="wrap">
       <div class="photo-container">
-        <img src="foto-profil.jpg" alt="Wahyuni Ulfah">
+        <!-- Ganti 'foto.jpg' dengan file foto latar merah Anda -->
+        <img src="foto.jpg" alt="Wahyuni Ulfah">
       </div>
-      <h1>WAHYUNI ULFAH</h1>
-      <div class="role">Professional Frontliner & SPG</div>
+      <h1>Wahyuni Ulfah</h1>
+      <div class="role">FRONTLINER / SALES PROMOTION GIRL (SPG)</div>
       <div class="contact-row">
-        <span>📞 08xx-xxxx-xxxx</span>
-        <span>✉️ email@example.com</span>
-        <span>📍 Indonesia</span>
+        <span><i class="fa-solid fa-phone"></i> 0882 1266 8990</span>
+        <span><i class="fa-solid fa-envelope"></i> ulfaw606@gmail.com</span>
+        <span><i class="fa-solid fa-location-dot"></i> Pandeglang, Banten</span>
       </div>
     </div>
   </header>
@@ -338,28 +353,44 @@ footer {
   <!-- NAVIGASI -->
   <nav>
     <div class="nav-wrap">
-      <a href="#tentang">Tentang</a>
-      <a href="#pengalaman">Pengalaman</a>
+      <a href="#profil">Profil</a>
       <a href="#keahlian">Keahlian</a>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#pendidikan">Pendidikan</a>
     </div>
   </nav>
 
   <!-- KONTEN UTAMA -->
   <main class="wrap">
     
-    <!-- Tentang Saya -->
-    <section id="tentang">
-      <h2><span class="dot"></span> Tentang Saya</h2>
+    <!-- Profil Singkat -->
+    <section id="profil">
+      <h2><span class="dot"></span> Profil Singkat</h2>
       <div class="card">
         <p class="about-text">
-          Seorang profesional di bidang pelayanan pelanggan, *frontliner*, dan promosi (*SPG*) dengan pengalaman luas di industri ritel dan FnB. Memiliki keahlian komunikasi yang kuat, penguasaan produk yang mendalam (*product mastery*), serta komitmen tinggi dalam memberikan pelayanan terbaik kepada pelanggan.
+          Frontliner/SPG berpengalaman lebih dari 3 tahun dengan rekam jejak solid dalam pelayanan pelanggan, promosi produk, dan pencapaian target penjualan di berbagai perusahaan ternama. Terbiasa bekerja di bawah tekanan, mudah beradaptasi dengan produk baru, dan memiliki kemampuan komunikasi yang sangat baik.
         </p>
       </div>
     </section>
 
-    <!-- Pengalaman Kerja dengan Area Upload di Tiap Perusahaan -->
+    <!-- Keahlian -->
+    <section id="keahlian">
+      <h2><span class="dot"></span> Keahlian & Kompetensi</h2>
+      <div class="card">
+        <div class="skills-grid">
+          <div class="skill-chip">Customer Service</div>
+          <div class="skill-chip">Product Mastery</div>
+          <div class="skill-chip">Public Speaking & Komunikasi</div>
+          <div class="skill-chip">Sales & Promotion (SPG)</div>
+          <div class="skill-chip">Kasir & Transaksi</div>
+          <div class="skill-chip">Kerjasama Tim</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pengalaman Kerja dengan Upload Foto di Tiap Perusahaan -->
     <section id="pengalaman">
-      <h2><span class="dot"></span> Pengalaman Kerja & Dokumentasi</h2>
+      <h2><span class="dot"></span> Pengalaman Kerja</h2>
       
       <!-- Pengalaman 1 -->
       <div class="card exp-card">
@@ -374,12 +405,13 @@ footer {
           <li>Mencapai target penjualan harian dan menjaga standar pelayanan merek.</li>
         </ul>
 
-        <!-- Area Upload Pengalaman 1 -->
         <div class="exp-gallery-section">
           <div class="gallery" id="gallery-1"></div>
-          <label class="upload-btn" for="file-1"><span>+ Tambah Foto Dokumentasi</span></label>
+          <label class="upload-btn" for="file-1">
+            <i class="fa-solid fa-cloud-arrow-up"></i> <span>Upload Foto PT. Kanzler</span>
+          </label>
           <input type="file" id="file-1" accept="image/*" multiple onchange="handleUpload(event, 'gallery-1')">
-          <div class="upload-hint">Unggah foto kegiatan atau produk di PT. Kanzler</div>
+          <div class="upload-hint">Tambahkan dokumentasi atau foto kegiatan di PT. Kanzler</div>
         </div>
       </div>
 
@@ -396,12 +428,13 @@ footer {
           <li>Membangun komunikasi yang baik guna meningkatkan loyalitas pelanggan terhadap merek.</li>
         </ul>
 
-        <!-- Area Upload Pengalaman 2 -->
         <div class="exp-gallery-section">
           <div class="gallery" id="gallery-2"></div>
-          <label class="upload-btn" for="file-2"><span>+ Tambah Foto Dokumentasi</span></label>
+          <label class="upload-btn" for="file-2">
+            <i class="fa-solid fa-cloud-arrow-up"></i> <span>Upload Foto PT. Radiant Nutrindo</span>
+          </label>
           <input type="file" id="file-2" accept="image/*" multiple onchange="handleUpload(event, 'gallery-2')">
-          <div class="upload-hint">Unggah foto kegiatan atau produk di PT. Radiant Nutrindo</div>
+          <div class="upload-hint">Tambahkan dokumentasi atau foto kegiatan di PT. Radiant Nutrindo</div>
         </div>
       </div>
 
@@ -418,28 +451,26 @@ footer {
           <li>Menangani transaksi pembayaran dan pencatatan kasir secara akurat.</li>
         </ul>
 
-        <!-- Area Upload Pengalaman 3 -->
         <div class="exp-gallery-section">
           <div class="gallery" id="gallery-3"></div>
-          <label class="upload-btn" for="file-3"><span>+ Tambah Foto Dokumentasi</span></label>
+          <label class="upload-btn" for="file-3">
+            <i class="fa-solid fa-cloud-arrow-up"></i> <span>Upload Foto Caffe Kopi Kiri</span>
+          </label>
           <input type="file" id="file-3" accept="image/*" multiple onchange="handleUpload(event, 'gallery-3')">
-          <div class="upload-hint">Unggah foto kegiatan atau suasana di Caffe Kopi Kiri</div>
+          <div class="upload-hint">Tambahkan dokumentasi atau foto kegiatan di Caffe Kopi Kiri</div>
         </div>
       </div>
     </section>
 
-    <!-- Keahlian -->
-    <section id="keahlian">
-      <h2><span class="dot"></span> Keahlian & Kompetensi</h2>
+    <!-- Pendidikan -->
+    <section id="pendidikan">
+      <h2><span class="dot"></span> Pendidikan</h2>
       <div class="card">
-        <div class="skills-grid">
-          <div class="skill-chip">Customer Service</div>
-          <div class="skill-chip">Product Mastery</div>
-          <div class="skill-chip">Komunikasi Publik</div>
-          <div class="skill-chip">Penjualan & Promosi (SPG)</div>
-          <div class="skill-chip">Manajemen Kasir / Transaksi</div>
-          <div class="skill-chip">Kerjasama Tim</div>
+        <div class="exp-top">
+          <span class="exp-title">Pendidikan Menengah / Sederajat</span>
+          <span class="exp-period">Pandeglang, Banten</span>
         </div>
+        <div class="exp-company">Sekolah Menengah Atas / Kejuruan</div>
       </div>
     </section>
 
@@ -449,7 +480,7 @@ footer {
     <p>&copy; 2026 Wahyuni Ulfah. All rights reserved.</p>
   </footer>
 
-  <!-- SCRIPT JAVASCRIPT UNTUK MASING-MASING GALERI -->
+  <!-- SCRIPT JAVASCRIPT UPLOAD -->
   <script>
     function handleUpload(event, galleryId) {
       const files = event.target.files;
@@ -470,7 +501,7 @@ footer {
 
           const delBtn = document.createElement('button');
           delBtn.className = 'del';
-          delBtn.innerHTML = '&times;';
+          delBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
           delBtn.type = 'button';
           
           delBtn.onclick = function() {
