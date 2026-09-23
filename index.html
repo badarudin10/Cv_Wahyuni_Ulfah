@@ -1,539 +1,632 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Portofolio - Wahyuni Ulfah</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-:root {
-  --navy: #0f172a;
-  --bg: #f8fafc;
-  --card: #ffffff;
-  --text: #334155;
-  --muted: #64748b;
-  --line: #e2e8f0;
-  --accent: #fbbf24;
-  --accent-glow: rgba(251, 191, 36, 0.6);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
-
-/* ANIMASI INTERAKTIF */
-@keyframes pulseGlow {
-  0% {
-    box-shadow: 0 0 0 0 var(--accent-glow);
-    transform: scale(1);
-  }
-  50% {
-    box-shadow: 0 0 15px 5px var(--accent-glow);
-    transform: scale(1.2);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0);
-    transform: scale(1);
-  }
-}
-
-@keyframes floatIcon {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0px); }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.wrap { max-width: 850px; margin: 0 auto; padding: 0 20px; }
-
-/* HERO SECTION */
-.hero {
-  background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
-  color: #fff;
-  padding: 50px 20px 40px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.photo-container {
-  width: 130px;
-  height: 155px;
-  margin: 0 auto 20px;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 4px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.photo-container:hover {
-  transform: scale(1.05) rotate(1deg);
-  border-color: #38bdf8;
-}
-
-.photo-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero h1 {
-  font-size: 26px;
-  margin: 0 0 8px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
-.hero .role {
-  font-size: 12.5px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #38bdf8;
-  margin: 0 0 20px;
-  font-weight: 600;
-}
-
-.contact-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px 25px;
-  font-size: 13.5px;
-  color: #cbd5e1;
-}
-
-.contact-row span {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: color 0.3s;
-}
-
-.contact-row span:hover {
-  color: #ffffff;
-}
-
-.contact-row i {
-  color: var(--accent);
-  display: inline-block;
-  animation: floatIcon 2.5s ease-in-out infinite;
-}
-
-/* NAVIGASI INTERAKTIF */
-nav {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  border-bottom: 1px solid var(--line);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
-}
-
-.nav-wrap {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 6px 20px;
-  overflow-x: auto;
-}
-
-nav a {
-  padding: 10px 18px;
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 13.5px;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--navy);
-  background: #f1f5f9;
-  transform: translateY(-2px);
-}
-
-/* KONTEN UTAMA */
-section { 
-  padding: 35px 0; 
-  animation: fadeInUp 0.7s ease-out backwards; 
-}
-
-section h2 {
-  font-size: 19px;
-  color: var(--navy);
-  margin: 0 0 18px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-/* TITIK KUNING BERSINAR */
-section h2 .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  display: inline-block;
-  animation: pulseGlow 2s infinite ease-in-out;
-}
-
-.card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 24px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.06);
-}
-
-.about-text {
-  font-size: 14.5px;
-  color: var(--text);
-  line-height: 1.8;
-  margin: 0;
-  text-align: justify;
-}
-
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skill-chip {
-  background: #f1f5f9;
-  color: var(--navy);
-  font-size: 13px;
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: 1px solid var(--line);
-  transition: all 0.3s ease;
-  cursor: default;
-}
-
-.skill-chip:hover {
-  background: var(--navy);
-  color: #fff;
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
-}
-
-.exp-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 6px;
-}
-
-.exp-title {
-  font-size: 15.5px;
-  font-weight: 700;
-  color: var(--navy);
-}
-
-.exp-period {
-  font-size: 12px;
-  color: #fff;
-  background: var(--navy);
-  padding: 3px 10px;
-  border-radius: 10px;
-  font-weight: 600;
-}
-
-.exp-company {
-  font-size: 13.5px;
-  color: #0284c7;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.exp-card ul {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--text);
-}
-
-.exp-card li {
-  font-size: 13.5px;
-  margin-bottom: 6px;
-}
-
-/* UPLOAD DOKUMENTASI */
-.exp-gallery-section {
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px dashed var(--line);
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 12px;
-}
-
-.thumb {
-  position: relative;
-  width: 75px;
-  height: 75px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  animation: fadeInUp 0.3s ease-out;
-}
-
-.thumb img { width: 100%; height: 100%; object-fit: cover; }
-
-.thumb .del {
-  position: absolute;
-  top: 3px; right: 3px;
-  width: 20px; height: 20px;
-  border-radius: 50%;
-  background: rgba(239, 68, 68, 0.9);
-  color: #fff;
-  border: none;
-  font-size: 11px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.upload-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #f8fafc;
-  color: var(--navy);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 12.5px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.upload-btn:hover {
-  background: #f1f5f9;
-  border-color: #cbd5e1;
-}
-
-.upload-btn i { color: #0284c7; }
-
-input[type="file"] { display: none; }
-
-footer {
-  text-align: center;
-  padding: 30px 20pxUntuk menampilkan foto secara langsung, gambar tersebut perlu dihubungkan menggunakan URL gambar yang valid atau format Base64 (jika berupa berkas lokal). 
-
-Berikut adalah kode HTML dan CSS yang sudah diperbarui. Saya telah menempelkan foto contoh (*placeholder* yang bisa Anda ganti dengan link foto Anda), menambahkan **efek titik kuning bersinar (glowing/pulsing)**, **ikon berdenyut/bergerak halus**, serta memperbarui tata letaknya agar terlihat jauh lebih profesional, modern, dan interaktif.
-
-```html
-<!DOCTYPE html>
-<html lang="id">
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profil Interaktif</title>
-  <!-- Menggunakan Font Awesome untuk Ikon -->
-  <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+  <title>Portofolio Profesional - Wahyuni Ulfah</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --bg-dark: #0f172a;
+      --bg-card: #1e293b;
+      --bg-card-hover: #26354a;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-gold: #facc15;
+      --accent-gold-glow: rgba(250, 204, 21, 0.6);
+      --accent-blue: #38bdf8;
+      --accent-blue-glow: rgba(56, 189, 248, 0.4);
+      --border-color: rgba(255, 255, 255, 0.1);
+    }
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #f8fafc;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 60px;
+      overflow-x: hidden;
     }
 
-    .card {
-      background: rgba(30, 41, 59, 0.7);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 24px;
-      padding: 40px;
-      max-width: 420px;
-      width: 100%;
+    /* ANIMASI INTERAKTIF */
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 0 0 var(--accent-gold-glow); transform: scale(0.98); }
+      50% { box-shadow: 0 0 18px 6px var(--accent-gold-glow); transform: scale(1.05); }
+      100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0); transform: scale(0.98); }
+    }
+
+    @keyframes floatIcon {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* HERO SECTION */
+    .hero {
       text-align: center;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      padding: 50px 20px 30px;
       position: relative;
     }
 
-    /* Container Foto Profil */
-    .profile-container {
+    .profile-wrapper {
       position: relative;
-      width: 130px;
-      height: 130px;
-      margin: 0 auto 20px;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 25px;
     }
 
     .profile-img {
       width: 100%;
       height: 100%;
-      border-radius: 50%;
       object-fit: cover;
-      border: 3px solid rgba(255, 255, 255, 0.2);
-    }
-
-    /* Titik Kuning Bersinar (Status Indikator) */
-    .status-dot {
-      position: absolute;
-      bottom: 6px;
-      right: 6px;
-      width: 18px;
-      height: 18px;
-      background-color: #facc15; /* Warna Kuning */
       border-radius: 50%;
-      border: 3px solid #1e293b;
-      box-shadow: 0 0 10px #facc15;
-      animation: pulse-yellow 2s infinite;
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      transition: transform 0.4s ease;
     }
 
-    /* Animasi Bersinar / Glow untuk Titik Kuning */
-    @keyframes pulse-yellow {
-      0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.7);
-      }
-      70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 12px rgba(250, 204, 21, 0);
-      }
-      100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(250, 204, 21, 0);
-      }
+    .profile-wrapper:hover .profile-img {
+      transform: scale(1.05) rotate(2deg);
+      border-color: var(--accent-blue);
     }
 
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 6px;
+    /* TITIK KUNING BERSINAR STATUS */
+    .status-badge {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent-gold);
     }
 
-    p.title {
-      color: #94a3b8;
-      font-size: 0.95rem;
-      margin-bottom: 24px;
+    .glowing-dot {
+      width: 10px;
+      height: 10px;
+      background-color: var(--accent-gold);
+      border-radius: 50%;
+      animation: pulseGlow 2s infinite ease-in-out;
     }
 
-    /* Deretan Ikon Interaktif Bergerak */
-    .social-icons {
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .hero .subtitle {
+      color: var(--accent-blue);
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    /* IKON SOSIAL MEDIA INTERAKTIF */
+    .social-links {
       display: flex;
       justify-content: center;
-      gap: 16px;
-      margin-bottom: 28px;
+      gap: 15px;
+      margin-bottom: 30px;
     }
 
-    .social-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #38bdf8;
+    .social-btn {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.2rem;
       text-decoration: none;
       transition: all 0.3s ease;
-      animation: float 3s ease-in-out infinite;
+      animation: floatIcon 3s ease-in-out infinite;
     }
 
-    /* Memberikan efek gerakan mengapung beda waktu tiap ikon */
-    .social-icon:nth-child(2) { animation-delay: 0.2s; }
-    .social-icon:nth-child(3) { animation-delay: 0.4s; }
-    .social-icon:nth-child(4) { animation-delay: 0.6s; }
+    .social-btn:nth-child(2) { animation-delay: 0.2s; }
+    .social-btn:nth-child(3) { animation-delay: 0.4s; }
+    .social-btn:nth-child(4) { animation-delay: 0.6s; }
+    .social-btn:nth-child(5) { animation-delay: 0.8s; }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
+    .social-btn:hover {
+      background: var(--accent-blue);
+      color: var(--bg-dark);
+      transform: translateY(-8px) scale(1.1);
+      box-shadow: 0 10px 20px var(--accent-blue-glow);
     }
 
-    .social-icon:hover {
-      background: #38bdf8;
-      color: #0f172a;
-      transform: translateY(-8px) scale(1.05);
-      box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+    /* STATISTIK RINGKAS (NILAI PLUS) */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 15px;
+      margin-bottom: 40px;
     }
 
-    /* Tombol Utama */
-    .btn {
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 18px 15px;
+      border-radius: 16px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-gold);
+    }
+
+    .stat-number {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* CARD SEKSI */
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 12px;
+    }
+
+    .section-title i {
+      color: var(--accent-blue);
+    }
+
+    .title-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-gold);
+      border-radius: 50%;
       display: inline-block;
-      width: 100%;
-      padding: 12px;
-      background: linear-gradient(90deg, #38bdf8, #818cf8);
-      color: #ffffff;
-      font-weight: 600;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: opacity 0.2s ease, transform 0.2s ease;
+      animation: pulseGlow 1.8s infinite;
     }
 
-    .btn:hover {
-      opacity: 0.9;
-      transform: translateY(-2px);
+    /* KEAHLIAN / SKILLS CHIPS */
+    .skills-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-badge {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .skill-badge:hover {
+      background: var(--accent-blue);
+      color: var(--bg-dark);
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px var(--accent-blue-glow);
+    }
+
+    .skill-badge i {
+      color: var(--accent-gold);
+    }
+
+    .skill-badge:hover i {
+      color: var(--bg-dark);
+    }
+
+    /* TIMELINE PENGALAMAN */
+    .timeline {
+      position: relative;
+      padding-left: 20px;
+      border-left: 2px solid var(--border-color);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -26px;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      border: 3px solid var(--bg-card);
+      box-shadow: 0 0 10px var(--accent-gold);
+    }
+
+    .timeline-date {
+      font-size: 0.8rem;
+      color: var(--accent-blue);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .timeline-role {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .timeline-company {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .timeline-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding-left: 15px;
+    }
+
+    .timeline-desc li {
+      margin-bottom: 6px;
+    }
+
+    /* KONTEN KONTAK DETIL */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .contact-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      padding: 16px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-decoration: none;
+      color: var(--text-main);
+      transition: all 0.3s;
+    }
+
+    .contact-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--accent-blue);
+      transform: translateY(-3px);
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--accent-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .contact-text .label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .contact-text .val {
+      font-size: 0.85rem;
+      font-weight: 600;
+      word-break: break-word;
+    }
+
+    /* FLOATING ACTION BUTTON (WHATSAPP) */
+    .float-wa {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      color: #fff;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      text-decoration: none;
+      z-index: 99;
+      transition: transform 0.3s ease;
+      animation: pulseGlow 2.5s infinite;
+    }
+
+    .float-wa:hover {
+      transform: scale(1.15);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding-top: 20px;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.75rem; }
+      .section-card { padding: 20px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <!-- Foto Profil & Titik Kuning Bersinar -->
-    <div class="profile-container">
-      <!-- Ganti URL di bawah dengan link foto Anda -->
-      <img src="[https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80](https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80)" alt="Foto Profil" class="profile-img">
-      <div class="status-dot" title="Aktif / Online"></div>
+  <div class="container">
+    
+    <!-- HERO SECTION -->
+    <header class="hero">
+      <div class="profile-wrapper">
+        <!-- Foto Profil Anda -->
+        <img src="foto-profil.png" alt="Wahyuni Ulfah" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Wahyuni+Ulfah&background=38bdf8&color=0f172a&size=256'">
+        
+        <!-- Titik Kuning Bersinar Status -->
+        <div class="status-badge">
+          <span class="glowing-dot"></span>
+          <span>Siap Bekerja</span>
+        </div>
+      </div>
+
+      <h1>Wahyuni Ulfah</h1>
+      <p class="subtitle">Frontliner & Customer Service Specialist</p>
+
+      <!-- Media Sosial Interaktif -->
+      <div class="social-links">
+        <a href="https://wa.me/6288212668990" target="_blank" class="social-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:ulfaw606@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://instagram.com/wahyuniul" target="_blank" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@wahyuniulfah" target="_blank" class="social-btn" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://facebook.com/Azzamkhair" target="_blank" class="social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </header>
+
+    <!-- STATISTIK / NILAI PLUS UNTUK PEREKRUT -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">3+</div>
+        <div class="stat-label">Tahun Pengalaman</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Orientasi Target</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">Active</div>
+        <div class="stat-label">Komunikasi Efektif</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">Fast</div>
+        <div class="stat-label">Adaptasi Kerja</div>
+      </div>
     </div>
 
-    <h2>Nama Anda</h2>
-    <p class="title">Pengembang / Profesional</p>
+    <!-- TENTANG SAYA -->
+    <section class="section-card">
+      <h2 class="section-title">
+        <i class="fas fa-user-circle"></i>
+        <span>Tentang Saya</span>
+        <span class="title-dot"></span>
+      </h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; text-align: justify;">
+        Saya adalah kandidat dengan penuh semangat dan banyak pengalaman, khususnya sebagai <strong>Frontliner / SPG</strong>. Dengan keinginan dan tekad yang sangat kuat untuk bergabung serta berkontribusi dalam tim yang dinamis, saya yakin dapat memberikan pelayanan terbaik dan membantu mencapai keberhasilan bersama. Saya siap menghadirkan energi positif dan bersinergi untuk mencapai target perusahaan secara maksimal.
+      </p>
+    </section>
 
-    <!-- Ikon Bergerak -->
-    <div class="social-icons">
-      <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="#" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="#" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    </div>
+    <!-- PENGALAMAN KERJA -->
+    <section class="section-card">
+      <h2 class="section-title">
+        <i class="fas fa-briefcase"></i>
+        <span>Pengalaman Kerja</span>
+        <span class="title-dot"></span>
+      </h2>
 
-    <a href="#" class="btn">Hubungi Saya</a>
+      <div class="timeline">
+        <!-- Pengalaman 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2025</div>
+          <div class="timeline-role">Frontliner Event</div>
+          <div class="timeline-company">PT. KANZLER</div>
+          <ul class="timeline-desc">
+            <li>Bertanggung jawab sebagai frontliner dalam event perusahaan secara mobile.</li>
+            <li>Ditempatkan secara fleksibel sesuai dengan kebutuhan strategis penjualan dan promosi perusahaan.</li>
+            <li>Berinteraksi langsung dengan pelanggan untuk meningkatkan *brand awareness* dan penjualan produk.</li>
+          </ul>
+        </div>
+
+        <!-- Pengalaman 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023 - 2025</div>
+          <div class="timeline-role">Frontliner / SPG</div>
+          <div class="timeline-company">PT. Radiant Nutrindo (Produk Vitamin)</div>
+          <ul class="timeline-desc">
+            <li>Memiliki pengalaman sebagai Frontliner/SPG di perusahaan ternama PT. Radiant Nutrindo.</li>
+            <li>Mampu bekerja sesuai arahan pimpinan, jujur, serta konsisten belajar untuk meningkatkan penjualan hingga mencapai omset target perusahaan.</li>
+            <li>Menampilkan keahlian berkomunikasi yang jelas, ramah, dan profesional dalam menangani pelanggan secara langsung.</li>
+            <li>Menguasai keterampilan *multitasking* dan penyelesaian masalah (*problem solving*) secara cepat dan tepat dalam situasi toko yang sibuk.</li>
+          </ul>
+        </div>
+
+        <!-- Pengalaman 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021 - 2022</div>
+          <div class="timeline-role">Store Crew</div>
+          <div class="timeline-company">Caffe Kopi Kiri</div>
+          <ul class="timeline-desc">
+            <li>Bertanggung jawab menyiapkan operasional toko, termasuk manajemen bahan baku kopi dan roti.</li>
+            <li>Memberikan pelayanan terbaik dan menjaga kebersihan serta keteraturan area operasional kafe.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEAHLIAN & KOMPETENSI -->
+    <section class="section-card">
+      <h2 class="section-title">
+        <i class="fas fa-star"></i>
+        <span>Keahlian & Kompetensi</span>
+        <span class="title-dot"></span>
+      </h2>
+
+      <div class="skills-wrapper">
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Pelayanan Pelanggan</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Komunikasi Efektif</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Penguasaan Produk</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Penanganan Keluhan</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Pemecahan Masalah</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Kerja Tim</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Adaptabilitas</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Empati & Kesabaran</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Pengelolaan Kasus</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Keteraturan & Disiplin</div>
+      </div>
+    </section>
+
+    <!-- PENDIDIKAN -->
+    <section class="section-card">
+      <h2 class="section-title">
+        <i class="fas fa-graduation-cap"></i>
+        <span>Pendidikan Terakhir</span>
+        <span class="title-dot"></span>
+      </h2>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <h3 style="font-size: 1.05rem; font-weight: 700;">SMA TAMAN SARI PANDEGLANG</h3>
+          <p style="color: var(--accent-blue); font-size: 0.9rem; font-weight: 600;">Jurusan Ilmu Pengetahuan Social (IPS)</p>
+        </div>
+        <span style="background: rgba(255, 255, 255, 0.05); padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; color: var(--accent-gold); border: 1px solid var(--border-color);">
+          Lulus 2016
+        </span>
+      </div>
+    </section>
+
+    <!-- KONTAK & ALAMAT -->
+    <section class="section-card">
+      <h2 class="section-title">
+        <i class="fas fa-address-card"></i>
+        <span>Informasi Kontak</span>
+        <span class="title-dot"></span>
+      </h2>
+
+      <div class="contact-grid">
+        <a href="https://wa.me/6288212668990" target="_blank" class="contact-card">
+          <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="contact-text">
+            <span class="label">Telepon / WhatsApp</span>
+            <span class="val">0882 1266 8990</span>
+          </div>
+        </a>
+
+        <a href="mailto:ulfaw606@gmail.com" class="contact-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-text">
+            <span class="label">Email Resmi</span>
+            <span class="val">ulfaw606@gmail.com</span>
+          </div>
+        </a>
+
+        <div class="contact-card" style="grid-column: 1 / -1;">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="contact-text">
+            <span class="label">Alamat Domisili</span>
+            <span class="val">Kp. Rocek Barat RT 012 RW 004, Desa Rocek, Kec. Cimanuk, Kab. Pandeglang, Banten</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 Wahyuni Ulfah. All rights reserved.</p>
+    </footer>
+
   </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/6288212668990" target="_blank" class="float-wa" title="Hubungi via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
