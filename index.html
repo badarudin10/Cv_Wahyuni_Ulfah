@@ -170,7 +170,7 @@
       box-shadow: 0 10px 20px var(--accent-blue-glow);
     }
 
-    /* STATISTIK RINGKAS (NILAI PLUS) */
+    /* STATISTIK RINGKAS */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -240,44 +240,7 @@
       animation: pulseGlow 1.8s infinite;
     }
 
-    /* KEAHLIAN / SKILLS CHIPS */
-    .skills-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .skill-badge {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--border-color);
-      padding: 8px 16px;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.3s ease;
-      cursor: default;
-    }
-
-    .skill-badge:hover {
-      background: var(--accent-blue);
-      color: var(--bg-dark);
-      transform: scale(1.05);
-      box-shadow: 0 5px 15px var(--accent-blue-glow);
-    }
-
-    .skill-badge i {
-      color: var(--accent-gold);
-    }
-
-    .skill-badge:hover i {
-      color: var(--bg-dark);
-    }
-
-    /* TIMELINE PENGALAMAN */
+    /* TIMELINE PENGALAMAN KERJA */
     .timeline {
       position: relative;
       padding-left: 20px;
@@ -286,7 +249,7 @@
 
     .timeline-item {
       position: relative;
-      margin-bottom: 25px;
+      margin-bottom: 35px;
     }
 
     .timeline-item:last-child {
@@ -331,13 +294,117 @@
       font-size: 0.9rem;
       color: var(--text-muted);
       padding-left: 15px;
+      margin-bottom: 15px;
     }
 
     .timeline-desc li {
       margin-bottom: 6px;
     }
 
-    /* KONTEN KONTAK DETIL */
+    /* FITUR UPLOAD DOKUMENTASI */
+    .upload-container {
+      margin-top: 15px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px dashed var(--border-color);
+      border-radius: 12px;
+    }
+
+    .upload-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--accent-blue);
+      color: var(--bg-dark);
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .upload-label:hover {
+      background: #7dd3fc;
+      transform: translateY(-2px);
+    }
+
+    .photo-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .gallery-item {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-item .remove-btn {
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      background: rgba(239, 68, 68, 0.85);
+      color: #fff;
+      border: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      font-size: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* KEAHLIAN / SKILLS CHIPS */
+    .skills-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-badge {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .skill-badge:hover {
+      background: var(--accent-blue);
+      color: var(--bg-dark);
+      transform: scale(1.05);
+    }
+
+    .skill-badge i {
+      color: var(--accent-gold);
+    }
+
+    .skill-badge:hover i {
+      color: var(--bg-dark);
+    }
+
+    /* KONTAK DETIL */
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -387,7 +454,7 @@
       word-break: break-word;
     }
 
-    /* FLOATING ACTION BUTTON (WHATSAPP) */
+    /* FLOATING WHATSAPP BUTTON */
     .float-wa {
       position: fixed;
       bottom: 25px;
@@ -412,7 +479,6 @@
       transform: scale(1.15);
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding-top: 20px;
@@ -420,7 +486,6 @@
       font-size: 0.8rem;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 600px) {
       .hero h1 { font-size: 1.75rem; }
       .section-card { padding: 20px; }
@@ -435,10 +500,10 @@
     <!-- HERO SECTION -->
     <header class="hero">
       <div class="profile-wrapper">
-        <!-- Foto Profil Anda -->
-        <img src="foto-profil.png" alt="Wahyuni Ulfah" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Wahyuni+Ulfah&background=38bdf8&color=0f172a&size=256'">
+        <!-- FOTO PROFIL GITHUB -->
+        <img src="1781803689500.png" alt="Wahyuni Ulfah" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Wahyuni+Ulfah&background=38bdf8&color=0f172a&size=256'">
         
-        <!-- Titik Kuning Bersinar Status -->
+        <!-- Status Indikator -->
         <div class="status-badge">
           <span class="glowing-dot"></span>
           <span>Siap Bekerja</span>
@@ -458,7 +523,7 @@
       </div>
     </header>
 
-    <!-- STATISTIK / NILAI PLUS UNTUK PEREKRUT -->
+    <!-- STATISTIK RINGKAS -->
     <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-number">3+</div>
@@ -490,7 +555,7 @@
       </p>
     </section>
 
-    <!-- PENGALAMAN KERJA -->
+    <!-- PENGALAMAN KERJA DENGAN UPLOAD DOKUMENTASI -->
     <section class="section-card">
       <h2 class="section-title">
         <i class="fas fa-briefcase"></i>
@@ -510,6 +575,15 @@
             <li>Ditempatkan secara fleksibel sesuai dengan kebutuhan strategis penjualan dan promosi perusahaan.</li>
             <li>Berinteraksi langsung dengan pelanggan untuk meningkatkan *brand awareness* dan penjualan produk.</li>
           </ul>
+
+          <!-- Form Upload Foto Pengalaman 1 -->
+          <div class="upload-container">
+            <label for="input-exp1" class="upload-label">
+              <i class="fas fa-camera"></i> Unggah Dokumentasi Kerja (Kanzler)
+            </label>
+            <input type="file" id="input-exp1" accept="image/*" multiple style="display:none;" onchange="handleImageUpload(event, 'gallery-exp1', 'photos_exp1')">
+            <div id="gallery-exp1" class="photo-gallery"></div>
+          </div>
         </div>
 
         <!-- Pengalaman 2 -->
@@ -524,6 +598,15 @@
             <li>Menampilkan keahlian berkomunikasi yang jelas, ramah, dan profesional dalam menangani pelanggan secara langsung.</li>
             <li>Menguasai keterampilan *multitasking* dan penyelesaian masalah (*problem solving*) secara cepat dan tepat dalam situasi toko yang sibuk.</li>
           </ul>
+
+          <!-- Form Upload Foto Pengalaman 2 -->
+          <div class="upload-container">
+            <label for="input-exp2" class="upload-label">
+              <i class="fas fa-camera"></i> Unggah Dokumentasi Kerja (Radiant)
+            </label>
+            <input type="file" id="input-exp2" accept="image/*" multiple style="display:none;" onchange="handleImageUpload(event, 'gallery-exp2', 'photos_exp2')">
+            <div id="gallery-exp2" class="photo-gallery"></div>
+          </div>
         </div>
 
         <!-- Pengalaman 3 -->
@@ -536,6 +619,15 @@
             <li>Bertanggung jawab menyiapkan operasional toko, termasuk manajemen bahan baku kopi dan roti.</li>
             <li>Memberikan pelayanan terbaik dan menjaga kebersihan serta keteraturan area operasional kafe.</li>
           </ul>
+
+          <!-- Form Upload Foto Pengalaman 3 -->
+          <div class="upload-container">
+            <label for="input-exp3" class="upload-label">
+              <i class="fas fa-camera"></i> Unggah Dokumentasi Kerja (Kopi Kiri)
+            </label>
+            <input type="file" id="input-exp3" accept="image/*" multiple style="display:none;" onchange="handleImageUpload(event, 'gallery-exp3', 'photos_exp3')">
+            <div id="gallery-exp3" class="photo-gallery"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -573,7 +665,7 @@
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
         <div>
           <h3 style="font-size: 1.05rem; font-weight: 700;">SMA TAMAN SARI PANDEGLANG</h3>
-          <p style="color: var(--accent-blue); font-size: 0.9rem; font-weight: 600;">Jurusan Ilmu Pengetahuan Social (IPS)</p>
+          <p style="color: var(--accent-blue); font-size: 0.9rem; font-weight: 600;">Jurusan Ilmu Pengetahuan Sosial (IPS)</p>
         </div>
         <span style="background: rgba(255, 255, 255, 0.05); padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; color: var(--accent-gold); border: 1px solid var(--border-color);">
           Lulus 2016
@@ -616,7 +708,6 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
       <p>© 2026 Wahyuni Ulfah. All rights reserved.</p>
     </footer>
@@ -628,5 +719,56 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
+  <!-- JAVASCRIPT UNTUK FUNGSI UPLOAD FOTO PENGALAMAN -->
+  <script>
+    function loadSavedPhotos(containerId, storageKey) {
+      const container = document.getElementById(containerId);
+      const savedPhotos = JSON.parse(localStorage.getItem(storageKey) || '[]');
+      container.innerHTML = '';
+
+      savedPhotos.forEach((src, index) => {
+        const item = document.createElement('div');
+        item.className = 'gallery-item';
+        item.innerHTML = `
+          <img src="${src}" alt="Dokumentasi Kerja">
+          <button class="remove-btn" onclick="deletePhoto('${storageKey}', ${index}, '${containerId}')">×</button>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function handleImageUpload(event, containerId, storageKey) {
+      const files = event.target.files;
+      if (!files.length) return;
+
+      const savedPhotos = JSON.parse(localStorage.getItem(storageKey) || '[]');
+
+      Array.from(files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          savedPhotos.push(e.target.result);
+          localStorage.setItem(storageKey, JSON.stringify(savedPhotos));
+          loadSavedPhotos(containerId, storageKey);
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    function deletePhoto(storageKey, index, containerId) {
+      let savedPhotos = JSON.parse(localStorage.getItem(storageKey) || '[]');
+      savedPhotos.splice(index, 1);
+      localStorage.setItem(storageKey, JSON.stringify(savedPhotos));
+      loadSavedPhotos(containerId, storageKey);
+    }
+
+    // Muat foto yang tersimpan saat halaman pertama kali dibuka
+    window.addEventListener('DOMContentLoaded', () => {
+      loadSavedPhotos('gallery-exp1', 'photos_exp1');
+      loadSavedPhotos('gallery-exp2', 'photos_exp2');
+      loadSavedPhotos('gallery-exp3', 'photos_exp3');
+    });
+  </script>
+
 </body>
 </html>
+
